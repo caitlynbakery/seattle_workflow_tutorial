@@ -76,6 +76,9 @@ mixin FancyNav(params={})
     .fancynavbar-collapse
       if !menu
         ul.fancynavbar-nav
+          li.fancynav-item
+            a(href=`${CWD}homes/seattle.html`).fancynav-link
+              span.fancynav-link-content home
           li.fancynav-item.fancy-dropdown
             a(href='JavaScript:void(0)').fancynav-link.fancy-dropdown-toggle
               span.fancynav-link-content homes
@@ -129,9 +132,7 @@ mixin FancyNav(params={})
                   each item in sitemap.documentation
                     +NavLink(item, 'documentation/')      
 
-          li.fancynav-item
-            a(href=`${CWD}pages/portfolio.html`).fancynav-link
-              span.fancynav-link-content portfolio
+         
           li.fancynav-item
             a(href=`${CWD}pages/contact.html`).fancynav-link
               span.fancynav-link-content contact
